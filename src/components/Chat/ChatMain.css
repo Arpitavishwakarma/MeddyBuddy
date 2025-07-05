@@ -1,0 +1,130 @@
+.chat-main{
+    flex: 1;
+    position: relative;
+}
+.nav p:hover{
+    color: #48466d;
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 15px;
+    color: #48466d;
+    cursor: pointer;
+}
+.nav svg{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid #48466d;
+    border-radius: 50%;
+}
+.nav svg:hover{
+    background-color: #dfe4ea;
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+.main-container{
+    max-width: 800px;
+    margin: auto;
+}
+.greet{
+    margin: 30px 0px;
+    font-size: 35px;
+    color: #c4c7c5;
+    font-weight: 500;
+    padding: 10px;
+    margin-left: 10px;
+}
+.greet span{
+    background: -webkit-linear-gradient(16deg,#48466d,#979797);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.cards{
+    margin-left: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 10px 0px;
+}
+.card{
+    height: 150px;
+    padding: 20px;
+    background-color: #f0f4f9;
+    border-radius: 40px;
+    position: relative;
+    cursor: pointer;
+}
+.card svg{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 15px;
+}
+.card p{
+    color: #585858;
+    font-size: 17px;
+}
+.card:hover{
+    background-color: #dfe4ea;
+}
+.main-bottom{
+    position: absolute;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.search-box svg{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.search-box button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0px 10px;
+}
+.search-box button:hover{
+    background-color: #dfe4ea;
+    border-radius: 20px;
+}
+.search-box input{
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #000000;
+    font-size: 16px;
+    padding: 5px;
+}
+.bottom-info{
+    font-size: 12px;
+    color: #a0a0a0;
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: #f0f4f9;
+    border-radius: 10px;    
+}
