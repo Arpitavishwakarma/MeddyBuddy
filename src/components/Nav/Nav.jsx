@@ -1,6 +1,6 @@
 import React ,{useState} from "react";
 import "./Nav.css"
-import { IoMdMenu } from "react-icons/io";
+import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 const logoimg = new URL('../../assets/logo.svg', import.meta.url).href;
 
@@ -29,7 +29,7 @@ function Nav(){
             <div className="nav3">
                 <button id="btn2" onClick={()=>{
                 setvisible(prev=>!prev)
-            }}>MENU <IoMdMenu /></button>
+            }}>MENU <Menu size={36} color="#48466d" strokeWidth={2.25} /></button>
             </div>
         </div>
         </>

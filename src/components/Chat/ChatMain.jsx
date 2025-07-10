@@ -1,15 +1,10 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import "./ChatMain.css";
-import { FcAssistant } from "react-icons/fc";
-import { IoSend } from "react-icons/io5";
-import { MdMicNone } from "react-icons/md";
-import { RiImageAddLine } from "react-icons/ri";
-import { FaCompass } from "react-icons/fa";
-
+import { Compass ,SendHorizontal,Image,Mic,Bot } from "lucide-react"; 
 const ChatMain = () => {
-  const GEMINI_API_KEY = "AIzaSyAU4pVkInSY8sZRaLVKHjwXQc-51vmhwyE"; // Use environment variables in production
-  const MODEL_NAME = "gemini-1.5-flash";
+  const GEMINI_API_KEY = "AIzaSyAU4pVkInSY8sZRaLVKHjwXQc-51vmhwyE";
+  const MODEL_NAME = "gemini-1.5-flash" ;
 
   const systemInstructionText = "You are a Medical Assistant, who answer only to medical related problem. If user ask you anything that is not related to medical, reply him rudely like you are dumb person. But if he/she ask problem related to medical response in a detail manner. you don't have to say that you are not a proffessional doctor, just answer the question in a detail manner. If user ask you to give suggestion, give him suggestions. If user have some chronic illness or disease, ask him to consult a doctor. If user ask you to give some medical advice, give him advice. If user ask you to give some medical tips, give him tips. If user ask you to give some medical information, give him information. If user ask you to give some medical knowledge, give him knowledge. If user ask you to give some medical facts, give him facts. If user ask you to give some medical history, give him history. If user ask you to give some medical news, give him news. If user ask you to give some medical updates, give him updates.";
 
@@ -126,7 +121,7 @@ const ChatMain = () => {
     <div className="chat-main">
       <div className="nav">
         <p>MEDDYBUDDY</p>
-        <FcAssistant />
+        <Bot size={36} color="#48466d" strokeWidth={2.25} />
       </div>
       <div className="main-container">
 
@@ -139,19 +134,19 @@ const ChatMain = () => {
         <div className="cards">
           <div className="card">
             <p>Suggest how to cure a headache</p>
-            <FaCompass />
+            <Compass size={36} color="#48466d" strokeWidth={2.5} />
           </div>
           <div className="card">
             <p>Vitamin C rich foods</p>
-            <FaCompass />
+            <Compass size={36} color="#48466d" strokeWidth={2.5} />
           </div>
           <div className="card">
             <p>Foods high in antioxidants</p>
-            <FaCompass />
+            <Compass size={36} color="#48466d" strokeWidth={2.5} />
           </div>
           <div className="card">
             <p>Foods high in omega-3 fatty acids</p>
-            <FaCompass />
+            <Compass size={36} color="#48466d" strokeWidth={2.5} />
           </div>
         </div>
         </>
@@ -164,10 +159,6 @@ const ChatMain = () => {
           <div id="outputArea" dangerouslySetInnerHTML={{ __html: output }} />
         </div>
         }
-
-        
-
-        
 
       </div>
       <div className="main-bottom">
@@ -183,9 +174,9 @@ const ChatMain = () => {
             disabled={loading}
           />
           <div>
-            <button className="addImageButton" disabled={loading}><RiImageAddLine /></button>
-            <button className="voiceInputButton" disabled={loading}><MdMicNone /></button>
-            <button className="askButton" onClick={handleAsk} disabled={loading}><IoSend /></button>
+            <button className="addImageButton" disabled={loading}><Image size={36} color="#000000" strokeWidth={2.25} /></button>
+            <button className="voiceInputButton" disabled={loading}><Mic size={36} color="#000000" strokeWidth={2.25} /></button>
+            <button className="askButton" onClick={handleAsk} disabled={loading}><SendHorizontal size={36} color="#000000" strokeWidth={2.25} /></button>
           </div>
         </div>
         <p className="bottom-info">

@@ -9,6 +9,7 @@ import SignUp from "./components/SignUp/SignUp";
 import Chat from "./components/Chat/Chat";
 import ChatMain from "./components/Chat/ChatMain";
 
+
 const router = createBrowserRouter(createRoutesFromElements(
     
     <Route path='/' element={<App/>}>

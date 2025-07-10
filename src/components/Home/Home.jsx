@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css"
 import { Link } from "react-router-dom";
-import { IoChatbubbleOutline } from "react-icons/io5";
+import { MessageCircle } from "lucide-react";
 const nurseImage = new URL('../../assets/nurse.png', import.meta.url).href;
 
 function Home(){
@@ -21,7 +21,7 @@ function Home(){
                     <p>your healthcare experience.</p>
                 </div>
                 <div className="hleft3">
-                    <Link to={"/Chat"}><button><IoChatbubbleOutline />Chat Assistant</button></Link>
+                    <Link to={"/Chat"}><button><MessageCircle size={23} color="#ffffff" strokeWidth={2.25} />Chat Assistant</button></Link>
                 </div>
             </div>
             <div className="hright">

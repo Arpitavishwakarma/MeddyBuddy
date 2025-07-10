@@ -1,9 +1,8 @@
 .chat-container {
   display: flex;
   min-height: 88vh;
-  margin-top: 80px;
- 
-}
+  margin-top: 81px;
+} 
 .side{
     padding: 25px 10px;
     display: inline-flex;

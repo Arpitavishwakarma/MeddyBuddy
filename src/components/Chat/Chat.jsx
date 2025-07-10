@@ -22,16 +22,6 @@ function Chat() {
                     <button><FiPlus/></button>
                     {extended?<p>New Chat</p>:null}
                 </div>
-                {extended?
-                <div className="recent">
-                    <p className="recent-title">Recent</p>
-                    <div className="recent-entry">
-                        <button><IoChatbubbleOutline /></button>
-                        <p>Vitamin C rich foods ...</p>
-                    </div>
-                </div>
-                :null
-                }
                 
             </div>
             <div className="low">

@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html --public-url ./",
-    "clean": "rm -rf dist .cache"
+    "build": "parcel build index.html",
+    "start": "serve dist",
+    "dev": "parcel index.html"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.1.0",
+    "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
@@ -20,6 +23,15 @@
   "devDependencies": {
     "@parcel/resolver-default": "^2.15.4",
     "@parcel/transformer-image": "^2.15.4",
-    "parcel": "^2.15.4"
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.1",
+    "events": "^3.3.0",
+    "os-browserify": "^0.3.0",
+    "parcel": "^2.15.4",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "string_decoder": "^1.3.0",
+    "vm-browserify": "^1.1.2"
   }
 }
