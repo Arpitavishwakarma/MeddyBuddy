@@ -4,7 +4,7 @@ function ChatLayout() {
   return (
     <div style={{ display: 'flex' }}>
       {/* Left Sidebar (Chat) */}
-      <div style={{ width: '30%', borderRight: '1px solid #ccc' }}>
+      <div style={{ width: '30%' ,borderRight: '1px solid #ccc' }}>
         <ChatSidebar />  {/* Your original Chat component */}
       </div>
 

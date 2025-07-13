@@ -2,6 +2,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./ChatMain.css";
 import { Compass ,SendHorizontal,Image,Mic,Bot } from "lucide-react"; 
+const logosvg = new URL('../../assets/logo.svg', import.meta.url).href;
+const nursepng = new URL('../../assets/nurse.png', import.meta.url).href;
 const ChatMain = () => {
   const GEMINI_API_KEY = "AIzaSyAU4pVkInSY8sZRaLVKHjwXQc-51vmhwyE";
   const MODEL_NAME = "gemini-1.5-flash" ;
@@ -13,6 +15,10 @@ const ChatMain = () => {
   const [loading, setLoading] = useState(false);
   const inputRef = useRef(null);
   const [showResult, setShowResult] = useState(false);
+  const delaypara = (index,nextword) =>{
+
+  }
+
   useEffect(() => {
     // Show welcome message after mount
     setTimeout(() => {
@@ -28,7 +34,17 @@ const ChatMain = () => {
     }
     setOutput("");
     setLoading(true);
-    
+    let responsearray = response.split("**");
+    let newArray;
+    for(let i=0 ; i<responsearray.length; i++)
+    {
+        if(i === 0 || i%2 !==1){
+          newArray += responsearray[i];
+        }
+        else{
+          newArray += "<b>"+responsearray[i]+"</b>";
+        }
+    }
     
     const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${GEMINI_API_KEY}`;
     const requestBody = {
@@ -96,7 +112,7 @@ const ChatMain = () => {
             htmlOutput += `<p>${paragraph}</p>`;
           }
         }
-        setOutput(htmlOutput);
+        setOutput(newArray);
       } else if (data.promptFeedback && data.promptFeedback.blockReason) {
         setOutput(`<div class="error-message">Blocked due to: ${data.promptFeedback.blockReason}</div>`);
       } else {
@@ -150,13 +166,21 @@ const ChatMain = () => {
           </div>
         </div>
         </>
-        :<div className="outputArea">
-          {loading && (
-            <div id="loadingIndicator" style={{ display: "block" }}>
-              <span>Loading...</span>
-            </div>
-          )}
-          <div id="outputArea" dangerouslySetInnerHTML={{ __html: output }} />
+        :<div className="result">
+          <div className="result-title">
+            <img  src={nursepng}></img>
+            <p>{question}</p>
+          </div>
+          <div className="result-data">
+            <img src={logosvg} ></img>
+            {loading
+            ?<div className="loader">
+              <hr />
+              <hr />
+              <hr />
+             </div>
+            :<p dangerouslySetInnerHTML={{__html:output}}></p>}
+          </div>
         </div>
         }
 
