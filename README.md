@@ -26,3 +26,7 @@ Installation:-
    Go to Google Developer Gemini and create your api key.)
    
 2. npx parcel index.html
+
+
+   Deployed link
+   https://meddy-buddy.vercel.app/
