@@ -1,7 +1,7 @@
 import React, { StrictMode } from "react";
 import ReactDOM from "react-dom/client"
 import App from "./App";
-import "./main.css"
+import "./Main.css"
 import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom"
 import Login from "./components/Login/Login";
 import Home from "./components/Home/Home";
