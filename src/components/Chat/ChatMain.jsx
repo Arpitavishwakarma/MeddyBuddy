@@ -34,17 +34,7 @@ const ChatMain = () => {
     }
     setOutput("");
     setLoading(true);
-    let responsearray = response.split("**");
-    let newArray;
-    for(let i=0 ; i<responsearray.length; i++)
-    {
-        if(i === 0 || i%2 !==1){
-          newArray += responsearray[i];
-        }
-        else{
-          newArray += "<b>"+responsearray[i]+"</b>";
-        }
-    }
+    
     
     const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${GEMINI_API_KEY}`;
     const requestBody = {
@@ -112,7 +102,7 @@ const ChatMain = () => {
             htmlOutput += `<p>${paragraph}</p>`;
           }
         }
-        setOutput(newArray);
+        setOutput(htmlOutput);
       } else if (data.promptFeedback && data.promptFeedback.blockReason) {
         setOutput(`<div class="error-message">Blocked due to: ${data.promptFeedback.blockReason}</div>`);
       } else {

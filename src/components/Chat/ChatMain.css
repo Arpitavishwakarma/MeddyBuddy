@@ -14,7 +14,6 @@
     padding: 15px 60px;
     color: #48466d;
     cursor: pointer;
-    position: fixed;
 }
 .nav svg{
     width: 40px;
@@ -74,7 +73,6 @@
     background-color: #dfe4ea;
 }
 .main-bottom{
-    position: absolute;
     width: 100%;
     max-width: 70%;
     margin: auto;
